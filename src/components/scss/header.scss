@@ -1,0 +1,45 @@
+@import '../../scss/mixins.scss';
+
+
+header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+
+  .logo{
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ebebeb;
+  }
+  .logo::before{
+    content: 'Galleria';
+  }
+
+  nav ul {
+    @include list-orizontal
+  }
+
+  .nav li {
+    padding: 10px;
+    opacity: .8;
+    cursor: pointer;
+    transition: .2s;
+  }
+  .nav li:hover {
+    opacity: 1;
+  }
+
+  .listIcons li svg {
+    font-size: 20px;
+    opacity: .6;
+    cursor: pointer;
+    transition: .2s;
+  }
+  .listIcons li svg:hover {
+    opacity: 1;
+  }
+
+
+}
