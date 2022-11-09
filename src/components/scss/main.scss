@@ -1,0 +1,97 @@
+@import '../../scss/variables';
+
+
+main{
+  padding: 50px 100px;
+
+
+  @media screen and (max-width: 1300px) {
+    padding: 50px 60px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    padding: 50px 30px;
+  }
+
+}
+
+.list{
+  display: grid;
+  grid-template: auto / 1fr 1fr 1fr;
+  align-content: center;
+  justify-items: center;
+  gap: 50px 10px;
+  list-style: none;
+
+  li {
+    position: relative;
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 0;
+
+      width: 100%;
+      min-height: 100%;
+      filter: grayscale(100%);
+    }
+
+    h3 , button {
+      position: relative;
+      z-index: 1;
+    }
+
+    h3 {
+      font-size: 27px;
+      letter-spacing: .5px;
+      font-family: 'Nanum Gothic', sans-serif;
+
+      background-color: #0000004d;
+      box-shadow: 0 0 10px 10px #0000004d;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 6px 20px;
+      border: 3px solid $textColor;
+      background: transparent;
+      color: $textColor;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 1000px) {
+      height: 320px;
+      width: 260px;
+    }
+
+
+    
+    @media screen and (max-width: 900px) {
+      height: 280px;
+      width: 200px;
+    }
+
+    @media screen and (max-width: 700px) {
+      height: 280px;
+      width: 100%;
+    }
+
+  }
+
+
+  @media screen and (max-width: 700px) {
+    grid-template: auto / 1fr;
+  }
+}
